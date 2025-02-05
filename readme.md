@@ -11,7 +11,7 @@ This project uses Terraform to create and manage AWS infrastructure. The main co
 
 ## Files
 
-- `Day 1/terraform-files/vpc.tf`: This file contains the Terraform configuration for setting up the AWS infrastructure.
+- `vpc.tf`: This file contains the Terraform configuration for setting up the AWS infrastructure.
 
 ## AWS Infrastructure Details
 
