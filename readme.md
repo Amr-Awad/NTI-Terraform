@@ -1,6 +1,6 @@
 # TERRAFORM
 
-![Terraform Icon](/assetes/icons8-terraform.svg)
+![Terraform](https://img.icons8.com/color/144/000000/terraform.png)      ![AWS](https://img.icons8.com/color/144/000000/amazon-web-services.png)
 
 ## Overview
 
