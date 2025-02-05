@@ -28,7 +28,7 @@ For detailed information, visit the [Day 1 README](Day1/README.md).
 
 ### Day 2
 
-![Diagram](./day2-architecture.jpj)
+![Diagram](./day2-architecture.jpg)
 
 Advanced AWS infrastructure setup including:
 - Additional Subnets
