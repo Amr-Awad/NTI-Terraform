@@ -1,62 +1,77 @@
-# Terraform AWS Infrastructure
+# TERRAFORM
 
-![Terraform](https://img.icons8.com/color/144/000000/terraform.png)      ![AWS](https://img.icons8.com/color/144/000000/amazon-web-services.png)
+![Terraform Icon](/assetes/icons8-terraform.svg)
 
-This project uses Terraform to create and manage AWS infrastructure. The infrastructure is divided into two sub-projects: Day 1 and Day 2, each focusing on different aspects of the AWS setup.
+## Overview
 
-## Labs Overview
+This project uses Terraform to create and manage AWS infrastructure. The main components of the infrastructure include a Virtual Private Cloud (VPC), subnets, an internet gateway, a NAT gateway, security groups, and EC2 instances.
 
-- **Day 1**: Basic VPC setup with subnets, internet gateway, NAT gateway, security groups, and EC2 instances.
-- **Day 2**: Advanced setup including additional subnets, NAT gateways, route tables, security groups, application load balancer, auto-scaling group, and more.
-- **Day 3**: Modularized Terraform configuration—created a structured modules approach with dedicated outputs, variables, workspaces, shared state files, and implemented conditions and loops for dynamic resource management.
+## Architecture
+![Diagram](./day1-architecture.png)
 
-## Days-Lab
+## Files
 
-### Day 1
+- `Day 1/terraform-files/vpc.tf`: This file contains the Terraform configuration for setting up the AWS infrastructure.
 
-![Diagram](/assetes/day1D.png)
+## AWS Infrastructure Details
 
-Basic AWS infrastructure setup including:
-- VPC
-- Subnets
-- Internet Gateway
-- NAT Gateway
-- Security Groups
-- EC2 Instances
+### VPC
 
-For detailed information, visit the [Day 1 README](Day1/README.md).
+The VPC is defined with the following configuration:
+- CIDR Block: `10.0.0.0/16`
+- Tags: `Name = "Terraform VPC"`
 
-### Day 2
+### Subnets
 
-![Daigram](/assetes/day2D.jpg)
+Two subnets are created within the VPC:
+- Public Subnet:
+  - CIDR Block: `10.0.1.0/24`
+  - Tags: `Name = "public_tf_subnet"`
+- Private Subnet:
+  - CIDR Block: `10.0.2.0/24`
+  - Tags: `Name = "private_tf_subnet"`
 
-Advanced AWS infrastructure setup including:
-- Additional Subnets
-- NAT Gateways
-- Route Tables
-- Security Groups
-- Application Load Balancer
-- Auto-Scaling Group
+### Internet Gateway
 
-For detailed information, visit the [Day 2 README](Day2/README.md).
+An internet gateway is attached to the VPC:
+- Tags: `Name = "igw-terraform"`
 
-### Day 3
+### NAT Gateway
 
-![Diagram](/assetes/day3.png)
+A NAT gateway is created in the public subnet to allow instances in the private subnet to access the internet:
+- Tags: `Name = "gw NAT"`
 
-Using modules and varaiables to creat this diagram:
-- Public Load Balancer
-- Public Load Balancer
-- Subnets
-- Secuirty Groups
-- EC2s
+### Security Groups
 
-For detailed information, visit the [Day 3 README](Day3/terraform-reverse-proxy/README.md).
+A security group is created to allow inbound TLS and SSH traffic and all outbound traffic:
+- Name: `allow_tls`
+- Description: `Allow TLS inbound traffic and all outbound traffic`
+
+### EC2 Instances
+
+Two EC2 instances are created:
+- Public Instance:
+  - AMI: Latest Ubuntu 22.04
+  - Instance Type: `t3.micro`
+  - Subnet: Public Subnet
+  - Tags: `Name = "HelloTerraForm"`
+- Private Instance:
+  - AMI: Latest Ubuntu 22.04
+  - Instance Type: `t3.micro`
+  - Subnet: Private Subnet
+  - Tags: `Name = "ByeTerraForm"`
+
+### Key Pair
+
+A key pair is generated for SSH access to the EC2 instances:
+- Key Name: `my-terraform-key`
+- Private Key: Stored locally as `my_terraform_key.pem`
 
 ## Usage
 
-To apply the Terraform configuration and create the infrastructure, navigate to the respective sub-project directory and run the following commands:
+To apply the Terraform configuration and create the infrastructure, run the following commands:
 
 ```sh
+cd Day\ 1/terraform-files
 terraform init
 terraform apply
