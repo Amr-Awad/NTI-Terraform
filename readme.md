@@ -55,8 +55,68 @@ For detailed information, visit the [Day 3 README](https://github.com/Amr-Awad/N
 
 ## Usage
 
-To apply the Terraform configuration and create the infrastructure, navigate to the respective sub-project directory and run the following commands:
+Each lab is deployed in a separate branch. To apply the Terraform configuration and create the infrastructure, navigate to the respective sub-project directory and run the following commands.
 
-```sh
-terraform init
-terraform apply
+### For Day 1 Lab
+
+1. Checkout the **Day-1** branch:
+    ```sh
+    git checkout Day-1
+    git pull origin Day-1
+    ```
+
+2. Initialize Terraform:
+    ```sh
+    terraform init
+    ```
+
+3. Apply the Terraform configuration:
+    ```sh
+    terraform apply
+    ```
+
+For Day 1 Branch, visit the [Day 1 Branch](https://github.com/Amr-Awad/NTI-Terraform/blob/Day-1).
+
+---
+
+### For Day 2 Lab
+
+1. Checkout the **Day-2** branch:
+    ```sh
+    git checkout Day-2
+    git pull origin Day-2
+    ```
+
+2. Initialize Terraform:
+    ```sh
+    terraform init
+    ```
+
+3. Apply the Terraform configuration:
+    ```sh
+    terraform apply
+    ```
+
+For Day 2 Branch, visit the [Day 2 Branch](https://github.com/Amr-Awad/NTI-Terraform/blob/Day-2).
+
+---
+
+### For Day 3 Lab
+
+1. Checkout the **Day-3** branch:
+    ```sh
+    git checkout Day-3
+    git pull origin Day-3
+    ```
+
+2. Initialize Terraform:
+    ```sh
+    terraform init
+    ```
+
+3. Apply the Terraform configuration:
+    ```sh
+    terraform apply
+    ```
+
+For Day 3 Branch, visit the [Day 3 Branch](https://github.com/Amr-Awad/NTI-Terraform/blob/Day-3).
