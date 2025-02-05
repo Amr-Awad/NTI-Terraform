@@ -69,9 +69,20 @@ A key pair is generated for SSH access to the EC2 instances:
 
 ## Usage
 
-To apply the Terraform configuration and create the infrastructure, run the following commands:
+To deploy the Terraform configuration from the **Day-1** branch, follow these steps:
 
-```sh
-cd Day\ 1/terraform-files
-terraform init
-terraform apply
+1. **Checkout the Day-1 branch and pull the latest changes:**
+    ```sh
+    git checkout Day-1
+    git pull origin Day-1
+    ```
+
+2. **Initialize Terraform:**
+    ```sh
+    terraform init
+    ```
+
+3. **Apply the Terraform configuration:**
+    ```sh
+    terraform apply
+    ```
