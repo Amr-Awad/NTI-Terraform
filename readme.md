@@ -13,7 +13,7 @@ This project uses Terraform to create and manage AWS infrastructure. The infrast
 ## Days-Lab
 
 ### Day 1
-
+Each Lab will be deployed in a separate branch 
 ![Diagram](./day1-architecture.png)
 
 Basic AWS infrastructure setup including:
@@ -44,9 +44,9 @@ For detailed information, visit the [Day 2 README](Day2/README.md).
 
 ![Diagram](./day3-architecture.png)
 
-Using modules and varaiables to creat this diagram:
+Using modules and varaiables to create this diagram:
 - Public Load Balancer
-- Public Load Balancer
+- private Load Balancer
 - Subnets
 - Secuirty Groups
 - EC2s
