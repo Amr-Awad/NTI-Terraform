@@ -50,7 +50,8 @@ The diagram below represents the dependency graph of our Terraform configuration
 - **Security and Access:**  
   The `security-groups-module` and `ssh-key-module` are essential for securing the EC2 instances. They are connected as dependencies to ensure that proper access control and secure SSH access are established before the instances are fully provisioned.
 
-This modules graph visually communicates the layered structure of our Terraform setup: beginning with the core networking components, followed by the provisioning of compute resources, load balancers, and finally, software configuration and security. It’s a helpful tool for understanding the interdependencies and orchestration within our infrastructure code.
+<p>This modules graph visually communicates the layered structure of our Terraform setup: beginning with the core networking components, followed by the provisioning of compute resources, load balancers, and finally, software configuration and security. It’s a helpful tool for understanding the interdependencies and orchestration within our infrastructure code.</p>
+
 ---
 
 ## Project Structure
