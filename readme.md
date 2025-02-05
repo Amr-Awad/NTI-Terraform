@@ -13,7 +13,7 @@ This project uses Terraform to create and manage AWS infrastructure. The infrast
 ## Days-Lab
 
 ### Day 1
-
+Each Lab will be deployed in a separate branch 
 ![Diagram](./day1-architecture.png)
 
 Basic AWS infrastructure setup including:
@@ -24,11 +24,11 @@ Basic AWS infrastructure setup including:
 - Security Groups
 - EC2 Instances
 
-For detailed information, visit the [Day 1 README](Day1/README.md).
+For detailed information, visit the [Day 1 README](https://github.com/Amr-Awad/NTI-Terraform/blob/Day-1/readme.md).
 
 ### Day 2
 
-![Diagram](./day2-architecture.png)
+![Diagram](./day2-architecture.jpg)
 
 Advanced AWS infrastructure setup including:
 - Additional Subnets
@@ -38,20 +38,20 @@ Advanced AWS infrastructure setup including:
 - Application Load Balancer
 - Auto-Scaling Group
 
-For detailed information, visit the [Day 2 README](Day2/README.md).
+For detailed information, visit the [Day 2 README]([Day2/README.md](https://github.com/Amr-Awad/NTI-Terraform/blob/Day-2/readme.md)).
 
 ### Day 3
 
 ![Diagram](./day3-architecture.png)
 
-Using modules and varaiables to creat this diagram:
+Using modules and varaiables to create this diagram:
 - Public Load Balancer
-- Public Load Balancer
+- private Load Balancer
 - Subnets
 - Secuirty Groups
 - EC2s
 
-For detailed information, visit the [Day 3 README](Day3/terraform-reverse-proxy/README.md).
+For detailed information, visit the [Day 3 README](https://github.com/Amr-Awad/NTI-Terraform/blob/Day-3/readme.md).
 
 ## Usage
 
